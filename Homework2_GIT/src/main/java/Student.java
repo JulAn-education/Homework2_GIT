@@ -67,6 +67,71 @@ public class Student {
         this.gender = gender;
     }
 
+    @Override
+    public String toString() {
+        return "Student{" +
+                "averageMark=" + averageMark +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                ", scholarship=" + scholarship +
+                ", classesAttended=" + classesAttended +
+                ", missedClasses=" + missedClasses +
+                ", gender='" + gender + '\'' +
+                '}';
+
 
     
+    }
+
+    public double percentageOfAttendance(){
+
+        double c = (classesAttended/(missedClasses + classesAttended)) * 100;
+        return c;
+
+    }
 }
+
+class ageComparator implements Comparator <Student>{
+
+
+    @Override
+    public int compare(Student o1, Student o2) {
+        if(o1.getAge() < o2.getAge()){
+            return 1;
+        } else if(o1.getAge() > o2.getAge()){
+            return -1;
+        } else {
+            return 0;
+        }
+    }
+}
+
+class averageMarkComparator implements Comparator <Student> {
+
+    @Override
+    public int compare(Student o1, Student o2) {
+        if(o1.getAverageMark() < o2.getAverageMark()) {
+            return 1;
+        } else if (o1.getAverageMark() > o2.getAverageMark()){
+            return -1;
+        }else {
+            return 0;
+        }
+    }
+}
+
+class scholarshipComparator implements Comparator <Student> {
+
+    @Override
+    public int compare(Student o1, Student o2) {
+        if(o1.getScholarship() < o2.getScholarship()){
+            return 1;
+        }else if (o1.getScholarship() > o2.getScholarship()){
+            return -1;
+        }else{
+            return 0;
+        }
+    }
+}
+
+
