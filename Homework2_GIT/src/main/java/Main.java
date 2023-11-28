@@ -54,13 +54,11 @@ public class Main {
                     String gender = sc.next();
                     Student student = new Student(name, averageMark, age, scholarship, classesAttended, missedClasses, gender);
                     listStudent.add(student);
-//                    setAge.add(student);
-//                    setStudent.add(student);
-//                    setScholarship.add(student);
+
                     break;
                 case 3:
 
-                    System.out.println("Введите имя: ");
+                    System.out.println("Input name: ");
                     name = sc.next();
                     for (int i = 0; i < listStudent.size(); i++){
                         if(listStudent.get(i).getName().equals(name)){
@@ -70,9 +68,9 @@ public class Main {
                     break;
 
                 case 4:
-                    System.out.println("Введите имя: ");
+                    System.out.println("Input name: ");
                     name = sc.next();
-                    System.out.println("Новая оценка: ");
+                    System.out.println("New average: ");
                     float newAverageMark = sc.nextFloat();
                     for (int i = 0; i < listStudent.size(); i++){
                         if(listStudent.get(i).getName().equals(name)){
@@ -82,9 +80,9 @@ public class Main {
 
                     break;
                 case 5:
-                    System.out.println("Введите имя: ");
+                    System.out.println("Input name: ");
                     name = sc.next();
-                    System.out.println("Степендия: ");
+                    System.out.println("Scholarship: ");
                     int newScholarship = sc.nextInt();
                     for(int i = 0; i < listStudent.size(); i++){
                         if(listStudent.get(i).getName().equals(name)){
@@ -113,7 +111,7 @@ public class Main {
 
                         System.out.println(listStudent);
                     } else if(num == 5)
-                        listStudent.stream().sorted(new percent()).forEach(System.out::println);
+                        //listStudent.stream().sorted(new percent()).forEach(System.out::println);
 
                     break;
 
