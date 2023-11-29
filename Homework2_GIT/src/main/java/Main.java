@@ -7,10 +7,10 @@ public class Main {
     public static void main(String[] args) {
         
 
-        Student student1 = new Student("Tom",5,  17, 2100, 40, 80, "m");
-        Student student2 = new Student("Bill",4.9F,  20, 2500, 45, 45, "f");
-        Student student3 = new Student("Mark",4.3F,  21, 2300, 30, 60, "f");
-        Student student4 = new Student("Tim",4.6F,  25, 2700, 20, 90, "m");
+        Student student1 = new Student("Иван",5,  17, 2100, 40, 80, "m");
+        Student student2 = new Student("Олег",4.9F,  20, 2500, 45, 45, "f");
+        Student student3 = new Student("Михаил",4.3F,  21, 2300, 30, 60, "f");
+        Student student4 = new Student("Антон",4.6F,  25, 2700, 20, 90, "m");
         List<Student> listStudent = new ArrayList<>();
         listStudent.add(student1);
         listStudent.add(student2);
