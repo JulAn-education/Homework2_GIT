@@ -134,6 +134,18 @@ class scholarshipComparator implements Comparator <Student> {
     }
 }
 
+class percent implements Comparator <Student> {
 
+    @Override
+    public int compare(Student o1, Student o2) {
+        if (o1.percentageOfAttendance() < o2.percentageOfAttendance()){
+            return 1;
+        }else if (o1.percentageOfAttendance() > o2.percentageOfAttendance()){
+            return -1;
+        } else {
+            return 0;
+        }
+    }
+}
 
 
