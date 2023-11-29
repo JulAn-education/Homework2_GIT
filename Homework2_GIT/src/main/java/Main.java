@@ -7,10 +7,10 @@ public class Main {
     public static void main(String[] args) {
         
 
-        Student student1 = new Student("Иван",5,  17, 2100, 40, 80, "m");
-        Student student2 = new Student("Олег",4.9F,  20, 2500, 45, 45, "f");
-        Student student3 = new Student("Михаил",4.3F,  21, 2300, 30, 60, "f");
-        Student student4 = new Student("Антон",4.6F,  25, 2700, 20, 90, "m");
+        Student student1 = new Student("Tom",5,  17, 2100, 40, 80, "m");
+        Student student2 = new Student("Bill",4.9F,  20, 2500, 45, 45, "f");
+        Student student3 = new Student("Mark",4.3F,  21, 2300, 30, 60, "f");
+        Student student4 = new Student("Tim",4.6F,  25, 2700, 20, 90, "m");
         List<Student> listStudent = new ArrayList<>();
         listStudent.add(student1);
         listStudent.add(student2);
@@ -54,11 +54,13 @@ public class Main {
                     String gender = sc.next();
                     Student student = new Student(name, averageMark, age, scholarship, classesAttended, missedClasses, gender);
                     listStudent.add(student);
-
+//                    setAge.add(student);
+//                    setStudent.add(student);
+//                    setScholarship.add(student);
                     break;
                 case 3:
 
-                    System.out.println("Input name: ");
+                    System.out.println("Введите имя: ");
                     name = sc.next();
                     for (int i = 0; i < listStudent.size(); i++){
                         if(listStudent.get(i).getName().equals(name)){
@@ -68,9 +70,9 @@ public class Main {
                     break;
 
                 case 4:
-                    System.out.println("Input name: ");
+                    System.out.println("Введите имя: ");
                     name = sc.next();
-                    System.out.println("New average: ");
+                    System.out.println("Новая оценка: ");
                     float newAverageMark = sc.nextFloat();
                     for (int i = 0; i < listStudent.size(); i++){
                         if(listStudent.get(i).getName().equals(name)){
@@ -80,9 +82,9 @@ public class Main {
 
                     break;
                 case 5:
-                    System.out.println("Input name: ");
+                    System.out.println("Введите имя: ");
                     name = sc.next();
-                    System.out.println("Scholarship: ");
+                    System.out.println("Степендия: ");
                     int newScholarship = sc.nextInt();
                     for(int i = 0; i < listStudent.size(); i++){
                         if(listStudent.get(i).getName().equals(name)){
@@ -111,7 +113,7 @@ public class Main {
 
                         System.out.println(listStudent);
                     } else if(num == 5)
-                        //listStudent.stream().sorted(new percent()).forEach(System.out::println);
+                        listStudent.stream().sorted(new percent()).forEach(System.out::println);
 
                     break;
 
